@@ -1,0 +1,339 @@
+       
+/* Partie CSS : renmplie la balise "style" de html */
+
+    /* Déclaration de variable : permet de centraliser certain element comme la couleur ds cet expl en ecrivant var(--color1)*/
+    *{ /* les styles dans l'* s'appliquent à tous les elements de la page*/
+        box-sizing: border-box;
+    }
+    :root{
+        --color1:#d697df;
+        --color2:#f4f4f4;
+    }   
+
+    body{
+        margin:0;
+        font-family: Arial;
+        line-height: 1.5; /* saut entre les ligne dans le texte */
+    }
+
+    iframe{
+        width: 100%;
+        border:none;
+        height: 350px;
+    }
+
+    div.cover {
+        background: url(cover_overlay.png) no-repeat center/100% 100%,url(cover.jpg) no-repeat center/cover; /* overlay sur l'image */      
+        height: 340px;
+        position : relative;
+    }
+
+    img.cover-profile {
+        height: 100px;
+        position : relative;
+        left : 50%;
+        margin-left: -50px;
+        margin-top: 35px;
+    }
+
+    h1{
+        color:white;
+        text-align:center;  
+        font-size: 35px; /* epaisseur text*/
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    h2{
+        text-align:center;  
+        font-size: 34px; /* epaisseur text*/
+        margin: 0px;
+    }
+
+    div.cover p{
+        color: white;
+        text-align: center;
+        margin-top: 7   px;
+        font-size: 15px;
+    }
+    
+    div.cover-contact{
+        /*background-color: #FF000050;*/
+        position : absolute;
+        top: 20px;
+        left:10px;
+        border-left: 4px solid var(--color1);
+        padding-left: 8px;
+    }
+
+    div.cover-contact p{
+        text-align: left;
+        margin-top:0px;
+        margin-bottom: 0px;
+    }
+
+    div.cover-contact p:first-child{
+        margin-bottom: 14px;
+    }
+
+    div.cover-contact *{ /* l'* pour dire que tout que se trouve dans la class aura cette mise en forme */
+        color:white;
+        font-size: 14px;
+    }
+
+    a.contact-button{
+        Color: var(--color1);
+        border:3px solid var(--color1);
+        padding : 8px 18px;
+        text-decoration: none;
+        background-color: #00000060;
+        display: inline-block;
+        margin-top: 14px;
+        font-size:14px;
+    }
+
+    a.contact-button-portfolio{
+        position:absolute; 
+        right: 20px; 
+        top:5px;
+    }
+
+    a.contact-button:hover{ /* hover, c'est quand on passe la souris sur un element */
+        color:white;
+        border:3px solid white;
+    }
+
+    .section{
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        overflow: auto; /* Permet un meilleur alignement en gerant le débordement */
+    }
+        
+    div.section-grise1{
+        background: url(triangle2white.svg) no-repeat center bottom -1px/100%; /* center : position vertical + bottom :position horizontal ; le -1px est un offset, il pert un meilleur affichage en decallant le triangle vers le bas*/
+        background-color: var(--color2);
+        padding-bottom: 70px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    div.section-grise2{
+        background: url(triangle1white.svg) no-repeat center top/100%; /* center : position vertical + bottom :position horizontal*/
+        background-color: var(--color2);
+        padding-bottom: 20px;
+    }
+
+    /* creation du la ligne "separateur" */
+    div.separateur{
+        background-color: #979797;
+        height:1px;
+        width:150px;
+        position : relative; /* Centrer le trait */
+        left:50%; /* Centrer le trait */
+        margin-left: -75px; /* ssoustraire la moitié de la longeur du trait pour bien le mettre au milieu */
+    }
+
+    div.section-gris1 p{
+        font-size: 22px;
+        color:#656565;
+        text-align: center;
+        max-width: 450px;
+        margin-right: auto; /* Center le texte */
+        margin-left: auto; /* Center le texte */
+    }
+
+    img.col-contenu{
+        width: 22%
+    }
+
+    div.col-contenu{
+        width: 78%;
+        padding-left: 5px;
+    }
+
+    .float-right{ /* Affichier un element sur le meme niveau qu'un autre*/
+        float: right;
+    }
+
+    div.texte-avec-ligne-verticale{
+        margin-top:0px;
+        border-left: 4px solid var(--color1);
+        padding-left: 8px;
+        height: 50px;
+        display: inline-block; /* considerer que tout le text appartient au meme block*/
+    }
+
+    div.texte-avec-ligne-verticale p{
+        margin-top:0px;
+    }
+
+    div.barre-verticale {
+        height:50px;
+        width: 4px;
+        background-color: var(--color1);
+        margin-right: 8px; /* c'est pour avoir de la marge entre l'image et la barre*/
+    }
+
+    .col-portfolio{
+        width: 45%;
+    }
+
+    div.frame{
+        margin-top: 30px;
+        padding-top: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);     
+    }
+
+    p.frame-title{
+        font-size: 30px;  
+        margin-top: 3px;  
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+    div.frame img{
+        width: 100px;
+    }
+
+    .col1frame{
+        width:auto;
+    }
+
+    .display-mobile{
+        display: none;
+    }
+
+/*----------------------- portfolio ----------------------- */
+    .portfolio-header{
+        height: 80px;
+        background: url(cover.jpg) no-repeat center/cover;
+        position: relative;
+    }
+
+    .portfolio-header-title{
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        margin-top: 0px;
+        padding-top: 4px;
+        padding-left: 8px;
+    }
+
+    h1.portfolio{
+        font-size: 46px;
+        color: black;
+    }
+
+    h2.portfolio{
+        font-size: 26px;
+        color: black;
+        font-weight: normal;
+        line-height: 1;
+        margin-top: 10px;
+        padding-top: 10px;
+        margin-bottom: 0px;
+    }
+
+    a.portfolio-back{
+        color: rgb(5, 15, 148);
+        margin-left: 0px;
+        font-size: 15px;
+    }
+
+    img.portfolio{
+        width: 70%;
+        max-width: 475px; /* Le Max width est la plus grande taille de l'ecans mobile */
+    }
+
+/*##### ---------------------------------- RESPONSIVE DESIGN : MOBILE ---------------------------------- ##### */
+
+@media only screen and (max-width:768px) {
+    /* Style particulier pour l'affichage sur telephone mobile */
+    /* ici on modifie certains parametre des styles déjà existants */
+
+    img.cover-profile {
+        height: 90px;
+        margin-top: 75px;
+    }
+
+    h1{
+        font-size: 38px; /* epaisseur text*/
+        margin-top: 6px;
+        margin-bottom: 0px;
+    }
+
+    h2{
+        text-align:center;  
+        font-size: 34px; /* epaisseur text*/
+        margin: 0px;
+    }
+
+    div.cover p{
+        margin-top: 2px;
+        font-size: 13px;
+    }
+
+    div.section-grise1{
+        padding-bottom: 40px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+
+    img.col-contenu{
+        width: 0%;
+    }
+
+    div.col-contenu{
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+
+    .col-portfolio{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    div.frame img{
+        width: 80px;
+    }
+
+    /* Portfolio - MOBILE */
+    p.portfolio-header-title{
+        font-size: 20px;
+        padding-top: 8px;
+        padding-left: 8px;
+    }
+
+    a.contact-button{
+        padding : 7px 15px;
+        margin-top: 12px;
+        font-size:12px;
+    }
+
+    a.contact-button-portfolio{
+        right: 8px; 
+    }
+
+    h1.portfolio{
+        font-size: 40px;
+    }
+
+    h2.portfolio{
+        font-size: 22px;
+    }
+
+    img.portfolio{
+        width: 100%;
+    }
+
+    .display-mobile{
+       display: block;
+    }
+
+}
